@@ -1,3 +1,5 @@
+import { index } from './controllers/users';
+
 var express = require('express');        // call express
 
 // ROUTES FOR OUR API
@@ -11,5 +13,7 @@ router.get('/', function (req, res) {
 router.post('/login', function (req, res) {
     res.json({ status: 'STATUS_OK' });
 });
+
 // more routes for our API will happen here
+// router.get('/users', index);
 module.exports = router;

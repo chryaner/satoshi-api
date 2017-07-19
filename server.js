@@ -30,5 +30,9 @@ app.use('/api', api);
 
 // START THE SERVER
 // =============================================================================
-app.listen(port);
+var server = app.listen(port, () => {
+    const { address, port } = server.address();
+    console.log(`Listening at http://${address}:${port}`);
+});
+
 console.log('Magic happens on port ' + port);
