@@ -11,9 +11,9 @@ const users = [
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/users');
 
-// Go through each movie
+// Go through each user 
 users.map(data => {
-    // Initialize a model with movie data
+    // Initialize a model with user data
     const user = new User(data);
     // and save it into the database
     user.save();
